@@ -1,10 +1,74 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/dummy_example.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("features/APIexample.feature");
+formatter.feature({
+  "line": 1,
+  "name": "First API test",
+  "description": "",
+  "id": "first-api-test",
+  "keyword": "Feature"
+});
+formatter.before({
+  "duration": 1086281063,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 3,
+  "name": "Random scenario",
+  "description": "",
+  "id": "first-api-test;random-scenario",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 5,
+  "name": "a",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "b",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "c",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "APIsteps.a()"
+});
+formatter.result({
+  "duration": 265776884,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APIsteps.b()"
+});
+formatter.result({
+  "duration": 60530,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APIsteps.c()"
+});
+formatter.result({
+  "duration": 54374,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 1366528,
+  "status": "passed"
+});
+formatter.uri("features/dummy_example.feature");
 formatter.feature({
   "line": 1,
   "name": "Descripcion feature",
   "description": "",
   "id": "descripcion-feature",
   "keyword": "Feature"
+});
+formatter.before({
+  "duration": 585289,
+  "status": "passed"
 });
 formatter.scenario({
   "line": 3,
@@ -39,21 +103,25 @@ formatter.match({
   "location": "DummySteps.i_have_cukes_in_my_belly(int)"
 });
 formatter.result({
-  "duration": 395652451,
+  "duration": 7423058,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.i_fake_the_step()"
 });
 formatter.result({
-  "duration": 216983,
+  "duration": 2160591,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.the_result_is_fake()"
 });
 formatter.result({
-  "duration": 959237,
+  "duration": 70789,
+  "status": "passed"
+});
+formatter.after({
+  "duration": 639149,
   "status": "passed"
 });
 });
