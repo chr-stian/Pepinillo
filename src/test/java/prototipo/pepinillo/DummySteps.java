@@ -17,5 +17,6 @@ public class DummySteps {
 
     @Then("^the result is fake$")
     public void the_result_is_fake() {
+    	System.out.format("Fake Then step!\n");
     }
 }

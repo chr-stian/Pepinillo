@@ -7,55 +7,89 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 1086281063,
+  "duration": 1171789608,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 3,
+  "line": 5,
   "name": "Random scenario",
   "description": "",
   "id": "first-api-test;random-scenario",
   "type": "scenario",
-  "keyword": "Scenario"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "line": 3,
+      "name": "@api_tag"
+    }
+  ]
 });
 formatter.step({
-  "line": 5,
-  "name": "a",
+  "line": 8,
+  "name": "a POST request with body esto es el cuerpo, title esto es el titulo and userId 8 is defined",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 6,
-  "name": "b",
+  "line": 9,
+  "name": "the POST request is sent",
   "keyword": "When "
 });
 formatter.step({
-  "line": 7,
-  "name": "c",
+  "line": 10,
+  "name": "the response body is esto es el cuerpo, title esto es el titulo and id is 8",
   "keyword": "Then "
 });
+formatter.step({
+  "line": 11,
+  "name": "the status code is 200",
+  "keyword": "And "
+});
 formatter.match({
-  "location": "APIsteps.a()"
+  "arguments": [
+    {
+      "val": "esto es el cuerpo",
+      "offset": 25
+    },
+    {
+      "val": "esto es el titulo",
+      "offset": 50
+    },
+    {
+      "val": "8",
+      "offset": 79
+    }
+  ],
+  "location": "APIsteps.a_post_request(String,String,int)"
 });
 formatter.result({
-  "duration": 265776884,
+  "duration": 1849557777,
   "status": "passed"
 });
 formatter.match({
-  "location": "APIsteps.b()"
+  "location": "APIsteps.the_post_request_is_sent()"
 });
 formatter.result({
-  "duration": 60530,
+  "duration": 3726675921,
   "status": "passed"
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.match({
-  "location": "APIsteps.c()"
+  "arguments": [
+    {
+      "val": "200",
+      "offset": 19
+    }
+  ],
+  "location": "APIsteps.the_status_code_is(int)"
 });
 formatter.result({
-  "duration": 54374,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 1366528,
+  "duration": 1071576,
   "status": "passed"
 });
 formatter.uri("features/dummy_example.feature");
@@ -65,10 +99,6 @@ formatter.feature({
   "description": "",
   "id": "descripcion-feature",
   "keyword": "Feature"
-});
-formatter.before({
-  "duration": 585289,
-  "status": "passed"
 });
 formatter.scenario({
   "line": 3,
@@ -103,25 +133,21 @@ formatter.match({
   "location": "DummySteps.i_have_cukes_in_my_belly(int)"
 });
 formatter.result({
-  "duration": 7423058,
+  "duration": 885883,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.i_fake_the_step()"
 });
 formatter.result({
-  "duration": 2160591,
+  "duration": 999248,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.the_result_is_fake()"
 });
 formatter.result({
-  "duration": 70789,
-  "status": "passed"
-});
-formatter.after({
-  "duration": 639149,
+  "duration": 690959,
   "status": "passed"
 });
 });
