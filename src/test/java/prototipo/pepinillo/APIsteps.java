@@ -3,8 +3,8 @@ package prototipo.pepinillo;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.number.OrderingComparison.lessThan;
-import java.util.concurrent.TimeUnit;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -19,16 +19,18 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
-import io.restassured.specification.RequestSpecification;
 
 public class APIsteps {
 	
-	private RequestSpecification request;
-	private Response response;
 	private ValidatableResponse json;
-	private Map<String,Object> cuerpo = new HashMap<>();
+	private Map<String,Object> cuerpo = new HashMap<String, Object>();
+	
+	private StepData stepData;
+	
+	public APIsteps(StepData stepData) {
+		this.stepData = stepData;
+	}
 	
 	@Before("@api_tag")
 	public void beforeScenario() {
@@ -44,22 +46,22 @@ public class APIsteps {
 	}
 	
 	
-	@Given("a POST request with body (.*), title (.*) and userId (\\d+) is defined")
+	@Given("^a POST request with body (.*), title (.*) and userId (\\d+) is defined$")
 	public void a_post_request(String body, String title, int userId){
          cuerpo.put("userId", userId);
          cuerpo.put("title", title);
          cuerpo.put("body", body);
-         request = given().contentType("application/json").body(cuerpo);
+         stepData.request = given().contentType("application/json").body(cuerpo);
 	}
     
     @When("^the POST request is sent$")
     public void the_post_request_is_sent() {
-    	response=request.when().post("/posts");
+    	stepData.response=stepData.request.when().post("/posts");
     }
 
-    @Then("the response's body is (.*), title is (.*) and userId is (\\d+)")
+    @Then("^the response's body is (.*), title is (.*) and userId is (\\d+)$")
     public void the_responses_bod_is(String body, String title, int userId) {
-    	response.then()
+    	stepData.response.then()
         .body("id",equalTo(101))
         .body("title",equalTo(title))
         .body("body",equalTo(body))
@@ -69,7 +71,7 @@ public class APIsteps {
     
     @And("^the status code is (\\d+)$")
     public void the_status_code_is(int statusCode) {
-    	json=response.then()
+    	json=stepData.response.then()
         .statusCode(statusCode);
     	//System.out.println(json.extract().asString());
     }
@@ -90,8 +92,27 @@ public class APIsteps {
     
     @Then("^the response time is less than (\\d+) ms$")
     public void the_response_time_is_less_than_ms(Long time) {
-    	response.then().time(lessThan(time));
+    	stepData.response.then().time(lessThan(time));
  
     }
+    
+    @Given("^a GET request with id (\\d+)$")
+    public void a_GET_request_with_id_id(int id) throws Throwable {
+    	stepData.request = given().contentType("application/json").param("id", id);
+    }
+    
+    @When("^the GET request is sent$")
+    public void the_GET_request_is_sent() {
+    	stepData.response = stepData.request.when().get("/comments");
+       
+    }
+    
+    @Then("^the email is ([^\"]*)$")
+    public void the_email_is_email(String email){
+    	stepData.response.then()
+        .body("email", equalTo(Arrays.asList(email)));
+      
+    }
+
       
 }

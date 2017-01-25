@@ -7,14 +7,14 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 983666809,
+  "duration": 954585512,
   "status": "passed"
 });
 formatter.scenario({
   "line": 5,
-  "name": "Random scenario",
+  "name": "post request with table scenario",
   "description": "",
-  "id": "first-api-test;random-scenario",
+  "id": "first-api-test;post-request-with-table-scenario",
   "type": "scenario",
   "keyword": "Scenario",
   "tags": [
@@ -53,28 +53,28 @@ formatter.step({
         "title",
         "esto es el titulo"
       ],
-      "line": 11
+      "line": 12
     },
     {
       "cells": [
         "body",
         "esto es el cuerpo"
       ],
-      "line": 12
+      "line": 13
     },
     {
       "cells": [
         "userId",
         "8"
       ],
-      "line": 13
+      "line": 14
     },
     {
       "cells": [
         "id",
         "101"
       ],
-      "line": 14
+      "line": 15
     }
   ],
   "keyword": "And "
@@ -97,14 +97,14 @@ formatter.match({
   "location": "APIsteps.a_post_request(String,String,int)"
 });
 formatter.result({
-  "duration": 1811622260,
+  "duration": 1565711841,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_post_request_is_sent()"
 });
 formatter.result({
-  "duration": 3294163633,
+  "duration": 3629261552,
   "status": "passed"
 });
 formatter.match({
@@ -125,7 +125,7 @@ formatter.match({
   "location": "APIsteps.the_responses_bod_is(String,String,int)"
 });
 formatter.result({
-  "duration": 1649997999,
+  "duration": 1403927537,
   "status": "passed"
 });
 formatter.match({
@@ -138,22 +138,22 @@ formatter.match({
   "location": "APIsteps.the_status_code_is(int)"
 });
 formatter.result({
-  "duration": 38310491,
+  "duration": 40594706,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.response_includes_the_following(DataTable)"
 });
 formatter.result({
-  "duration": 121542002,
+  "duration": 133040022,
   "status": "passed"
 });
 formatter.after({
-  "duration": 938206,
+  "duration": 2441182,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 16,
+  "line": 17,
   "name": "time measuring",
   "description": "",
   "id": "first-api-test;time-measuring",
@@ -161,18 +161,18 @@ formatter.scenario({
   "keyword": "Scenario"
 });
 formatter.step({
-  "line": 17,
+  "line": 18,
   "name": "a POST request with body esto es el cuerpo, title esto es el titulo and userId 8 is defined",
   "keyword": "Given "
 });
 formatter.step({
-  "line": 18,
+  "line": 19,
   "name": "the POST request is sent",
   "keyword": "When "
 });
 formatter.step({
-  "line": 19,
-  "name": "the response time is less than 800 ms",
+  "line": 20,
+  "name": "the response time is less than 8000 ms",
   "keyword": "Then "
 });
 formatter.match({
@@ -193,27 +193,277 @@ formatter.match({
   "location": "APIsteps.a_post_request(String,String,int)"
 });
 formatter.result({
-  "duration": 38263298,
+  "duration": 18977505,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_post_request_is_sent()"
 });
 formatter.result({
-  "duration": 412705838,
+  "duration": 915432226,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "800",
+      "val": "8000",
       "offset": 31
     }
   ],
   "location": "APIsteps.the_response_time_is_less_than_ms(Long)"
 });
 formatter.result({
-  "duration": 65694914,
+  "duration": 55120222,
+  "status": "passed"
+});
+formatter.scenarioOutline({
+  "line": 22,
+  "name": "get request with scenario outline",
+  "description": "",
+  "id": "first-api-test;get-request-with-scenario-outline",
+  "type": "scenario_outline",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 23,
+  "name": "a GET request with id \u003cid\u003e",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "the GET request is sent",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "the email is \u003cemail\u003e",
+  "keyword": "Then "
+});
+formatter.examples({
+  "line": 27,
+  "name": "",
+  "description": "",
+  "id": "first-api-test;get-request-with-scenario-outline;",
+  "rows": [
+    {
+      "cells": [
+        "id",
+        "email"
+      ],
+      "line": 29,
+      "id": "first-api-test;get-request-with-scenario-outline;;1"
+    },
+    {
+      "cells": [
+        "1",
+        "Eliseo@gardner.biz"
+      ],
+      "line": 30,
+      "id": "first-api-test;get-request-with-scenario-outline;;2"
+    },
+    {
+      "cells": [
+        "2",
+        "Jayne_Kuhic@sydney.com"
+      ],
+      "line": 31,
+      "id": "first-api-test;get-request-with-scenario-outline;;3"
+    },
+    {
+      "cells": [
+        "3",
+        "Nikita@garfield.biz"
+      ],
+      "line": 32,
+      "id": "first-api-test;get-request-with-scenario-outline;;4"
+    }
+  ],
+  "keyword": "Examples"
+});
+formatter.scenario({
+  "line": 30,
+  "name": "get request with scenario outline",
+  "description": "",
+  "id": "first-api-test;get-request-with-scenario-outline;;2",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 23,
+  "name": "a GET request with id 1",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "the GET request is sent",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "the email is Eliseo@gardner.biz",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 22
+    }
+  ],
+  "location": "APIsteps.a_GET_request_with_id_id(int)"
+});
+formatter.result({
+  "duration": 44568103,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APIsteps.the_GET_request_is_sent()"
+});
+formatter.result({
+  "duration": 241253759,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Eliseo@gardner.biz",
+      "offset": 13
+    }
+  ],
+  "location": "APIsteps.the_email_is_email(String)"
+});
+formatter.result({
+  "duration": 57305436,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 31,
+  "name": "get request with scenario outline",
+  "description": "",
+  "id": "first-api-test;get-request-with-scenario-outline;;3",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 23,
+  "name": "a GET request with id 2",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "the GET request is sent",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "the email is Jayne_Kuhic@sydney.com",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "2",
+      "offset": 22
+    }
+  ],
+  "location": "APIsteps.a_GET_request_with_id_id(int)"
+});
+formatter.result({
+  "duration": 40600861,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APIsteps.the_GET_request_is_sent()"
+});
+formatter.result({
+  "duration": 151348626,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Jayne_Kuhic@sydney.com",
+      "offset": 13
+    }
+  ],
+  "location": "APIsteps.the_email_is_email(String)"
+});
+formatter.result({
+  "duration": 27823004,
+  "status": "passed"
+});
+formatter.scenario({
+  "line": 32,
+  "name": "get request with scenario outline",
+  "description": "",
+  "id": "first-api-test;get-request-with-scenario-outline;;4",
+  "type": "scenario",
+  "keyword": "Scenario Outline"
+});
+formatter.step({
+  "line": 23,
+  "name": "a GET request with id 3",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 24,
+  "name": "the GET request is sent",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 25,
+  "name": "the email is Nikita@garfield.biz",
+  "matchedColumns": [
+    1
+  ],
+  "keyword": "Then "
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "3",
+      "offset": 22
+    }
+  ],
+  "location": "APIsteps.a_GET_request_with_id_id(int)"
+});
+formatter.result({
+  "duration": 1989263,
+  "status": "passed"
+});
+formatter.match({
+  "location": "APIsteps.the_GET_request_is_sent()"
+});
+formatter.result({
+  "duration": 153231705,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "Nikita@garfield.biz",
+      "offset": 13
+    }
+  ],
+  "location": "APIsteps.the_email_is_email(String)"
+});
+formatter.result({
+  "duration": 28228243,
   "status": "passed"
 });
 formatter.uri("features/dummy_example.feature");
@@ -257,21 +507,21 @@ formatter.match({
   "location": "DummySteps.i_have_cukes_in_my_belly(int)"
 });
 formatter.result({
-  "duration": 3537892,
+  "duration": 3703066,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.i_fake_the_step()"
 });
 formatter.result({
-  "duration": 850489,
+  "duration": 416012,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.the_result_is_fake()"
 });
 formatter.result({
-  "duration": 901272,
+  "duration": 362151,
   "status": "passed"
 });
 });
