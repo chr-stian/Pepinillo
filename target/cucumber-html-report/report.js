@@ -7,7 +7,7 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 954585512,
+  "duration": 975821584,
   "status": "passed"
 });
 formatter.scenario({
@@ -97,14 +97,14 @@ formatter.match({
   "location": "APIsteps.a_post_request(String,String,int)"
 });
 formatter.result({
-  "duration": 1565711841,
+  "duration": 1795274193,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_post_request_is_sent()"
 });
 formatter.result({
-  "duration": 3629261552,
+  "duration": 4134322937,
   "status": "passed"
 });
 formatter.match({
@@ -125,7 +125,7 @@ formatter.match({
   "location": "APIsteps.the_responses_bod_is(String,String,int)"
 });
 formatter.result({
-  "duration": 1403927537,
+  "duration": 1492911905,
   "status": "passed"
 });
 formatter.match({
@@ -138,18 +138,18 @@ formatter.match({
   "location": "APIsteps.the_status_code_is(int)"
 });
 formatter.result({
-  "duration": 40594706,
+  "duration": 35666177,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.response_includes_the_following(DataTable)"
 });
 formatter.result({
-  "duration": 133040022,
+  "duration": 174518561,
   "status": "passed"
 });
 formatter.after({
-  "duration": 2441182,
+  "duration": 1789721,
   "status": "passed"
 });
 formatter.scenario({
@@ -193,14 +193,14 @@ formatter.match({
   "location": "APIsteps.a_post_request(String,String,int)"
 });
 formatter.result({
-  "duration": 18977505,
+  "duration": 19133445,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_post_request_is_sent()"
 });
 formatter.result({
-  "duration": 915432226,
+  "duration": 545427312,
   "status": "passed"
 });
 formatter.match({
@@ -213,7 +213,7 @@ formatter.match({
   "location": "APIsteps.the_response_time_is_less_than_ms(Long)"
 });
 formatter.result({
-  "duration": 55120222,
+  "duration": 83294605,
   "status": "passed"
 });
 formatter.scenarioOutline({
@@ -319,14 +319,14 @@ formatter.match({
   "location": "APIsteps.a_GET_request_with_id_id(int)"
 });
 formatter.result({
-  "duration": 44568103,
+  "duration": 43128221,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_GET_request_is_sent()"
 });
 formatter.result({
-  "duration": 241253759,
+  "duration": 204766844,
   "status": "passed"
 });
 formatter.match({
@@ -339,7 +339,7 @@ formatter.match({
   "location": "APIsteps.the_email_is_email(String)"
 });
 formatter.result({
-  "duration": 57305436,
+  "duration": 97885267,
   "status": "passed"
 });
 formatter.scenario({
@@ -381,14 +381,14 @@ formatter.match({
   "location": "APIsteps.a_GET_request_with_id_id(int)"
 });
 formatter.result({
-  "duration": 40600861,
+  "duration": 29749685,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_GET_request_is_sent()"
 });
 formatter.result({
-  "duration": 151348626,
+  "duration": 207466044,
   "status": "passed"
 });
 formatter.match({
@@ -401,7 +401,7 @@ formatter.match({
   "location": "APIsteps.the_email_is_email(String)"
 });
 formatter.result({
-  "duration": 27823004,
+  "duration": 40833746,
   "status": "passed"
 });
 formatter.scenario({
@@ -443,14 +443,14 @@ formatter.match({
   "location": "APIsteps.a_GET_request_with_id_id(int)"
 });
 formatter.result({
-  "duration": 1989263,
+  "duration": 1755865,
   "status": "passed"
 });
 formatter.match({
   "location": "APIsteps.the_GET_request_is_sent()"
 });
 formatter.result({
-  "duration": 153231705,
+  "duration": 169749562,
   "status": "passed"
 });
 formatter.match({
@@ -463,7 +463,7 @@ formatter.match({
   "location": "APIsteps.the_email_is_email(String)"
 });
 formatter.result({
-  "duration": 28228243,
+  "duration": 31857442,
   "status": "passed"
 });
 formatter.uri("features/dummy_example.feature");
@@ -507,21 +507,21 @@ formatter.match({
   "location": "DummySteps.i_have_cukes_in_my_belly(int)"
 });
 formatter.result({
-  "duration": 3703066,
+  "duration": 3226012,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.i_fake_the_step()"
 });
 formatter.result({
-  "duration": 416012,
+  "duration": 385746,
   "status": "passed"
 });
 formatter.match({
   "location": "DummySteps.the_result_is_fake()"
 });
 formatter.result({
-  "duration": 362151,
+  "duration": 391389,
   "status": "passed"
 });
 });
