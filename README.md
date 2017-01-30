@@ -1,4 +1,4 @@
-# Pepinillo
+# pepinillo
 TO DO:
 scenario outline
 reuse steps
