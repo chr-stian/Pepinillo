@@ -1,5 +1,4 @@
 # pepinillo
-TO DO:
-scenario outline
-reuse steps
-results report
+
+To run the tests:
+mvn test -Dcucumber.options="--tags @api_tag"
