@@ -13,9 +13,7 @@ public class Reports {
 	public static void main(String[] args) {
 		File reportOutputDirectory = new File("target");
 		List<String> jsonFiles = new ArrayList<String>();
-				
-		
-		
+								
 		jsonFiles.add("target/cucumber-report.json");
 		//jsonFiles.add("cucumber-report-2.json");
 
