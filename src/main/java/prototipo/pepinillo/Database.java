@@ -2,6 +2,8 @@ package prototipo.pepinillo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Database {
@@ -51,6 +53,40 @@ public class Database {
 			System.exit(0);
 		}
 		System.out.println("Table created successfully");
+	}
+	
+	
+	public void showSomethingAndDestroyDb(Connection c){
+		
+		try {
+			Statement stmt = null;
+			stmt = c.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM COMPANY;");
+			while (rs.next()) {
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				int age = rs.getInt("age");
+				String address = rs.getString("address");
+				float salary = rs.getFloat("salary");
+				System.out.println("ID = " + id);
+				System.out.println("NAME = " + name);
+				System.out.println("AGE = " + age);
+				System.out.println("ADDRESS = " + address);
+				System.out.println("SALARY = " + salary);
+				System.out.println();
+			}
+			rs.close();
+
+			stmt.executeUpdate("DROP TABLE COMPANY");
+			stmt.close();
+			c.commit();
+			c.close();
+		} catch (SQLException e1) {
+
+			e1.printStackTrace();
+		}
+		
+		
 	}
 
 }
