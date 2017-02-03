@@ -16,12 +16,9 @@ public class GetProperties {
 				String propFileName = "config.properties";
 				InputStream inputStream;
 				
-				//inputStream = new FileInputStream("absolute//path//to//file");
-				//Eclipse: Run - Run Configurations - Java Application - Classpath
-				//Advanced - Add folders - pepinillo
-				inputStream = GetProperties.class.getClassLoader().getResourceAsStream("src/test/resources/"+propFileName);
+				inputStream = GetProperties.class.getResourceAsStream("/"+propFileName);
 				if(inputStream==null) {
-					System.out.println("NOT FOUND\n");
+					System.out.println("ERROR "+propFileName+ " NOT FOUND!\n");
 				}
 
 				prop.load(inputStream);
